@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.Domain", "EFCore.Domain\EFCore.Domain.csproj", "{54355060-0B80-47AC-91B6-1F9A8C7102CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.Data", "EFCore.Data\EFCore.Data.csproj", "{CDEDBC3D-433E-4E9F-B385-8D090E505E32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54355060-0B80-47AC-91B6-1F9A8C7102CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54355060-0B80-47AC-91B6-1F9A8C7102CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54355060-0B80-47AC-91B6-1F9A8C7102CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54355060-0B80-47AC-91B6-1F9A8C7102CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDEDBC3D-433E-4E9F-B385-8D090E505E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDEDBC3D-433E-4E9F-B385-8D090E505E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDEDBC3D-433E-4E9F-B385-8D090E505E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDEDBC3D-433E-4E9F-B385-8D090E505E32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
