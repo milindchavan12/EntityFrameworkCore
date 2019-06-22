@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.Domain", "EFCore.Dom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.Data", "EFCore.Data\EFCore.Data.csproj", "{CDEDBC3D-433E-4E9F-B385-8D090E505E32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCore.WebApp", "EfCore.WebApp\EfCore.WebApp.csproj", "{B3619E9A-C650-4731-8187-8B1363F65103}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +21,9 @@ Global
 		{CDEDBC3D-433E-4E9F-B385-8D090E505E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDEDBC3D-433E-4E9F-B385-8D090E505E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDEDBC3D-433E-4E9F-B385-8D090E505E32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3619E9A-C650-4731-8187-8B1363F65103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3619E9A-C650-4731-8187-8B1363F65103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3619E9A-C650-4731-8187-8B1363F65103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3619E9A-C650-4731-8187-8B1363F65103}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

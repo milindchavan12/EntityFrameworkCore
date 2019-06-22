@@ -21,7 +21,11 @@ namespace EFCore.Data.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<DateTime>("EndDate");
+
                     b.Property<string>("Name");
+
+                    b.Property<DateTime>("StartDate");
 
                     b.HasKey("Id");
 
@@ -49,8 +53,6 @@ namespace EFCore.Data.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("BattleId");
-
                     b.Property<string>("Name");
 
                     b.HasKey("Id");
@@ -58,11 +60,62 @@ namespace EFCore.Data.Migrations
                     b.ToTable("Samurais");
                 });
 
+            modelBuilder.Entity("EFCore.Domain.SamuraiBattle", b =>
+                {
+                    b.Property<int>("SamuraiId");
+
+                    b.Property<int>("BattleId");
+
+                    b.HasKey("SamuraiId", "BattleId");
+
+                    b.HasIndex("BattleId");
+
+                    b.ToTable("SamuraiBattle");
+                });
+
+            modelBuilder.Entity("EFCore.Domain.SecretIdentity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("RealName");
+
+                    b.Property<int>("SamuraiId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SamuraiId")
+                        .IsUnique();
+
+                    b.ToTable("SecretIdentity");
+                });
+
             modelBuilder.Entity("EFCore.Domain.Quote", b =>
                 {
                     b.HasOne("EFCore.Domain.Samurai")
                         .WithMany("Quotes")
                         .HasForeignKey("SamuraiId");
+                });
+
+            modelBuilder.Entity("EFCore.Domain.SamuraiBattle", b =>
+                {
+                    b.HasOne("EFCore.Domain.Battle", "Battle")
+                        .WithMany("SamuraiBattles")
+                        .HasForeignKey("BattleId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("EFCore.Domain.Samurai", "Samurai")
+                        .WithMany("SamuraiBattles")
+                        .HasForeignKey("SamuraiId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("EFCore.Domain.SecretIdentity", b =>
+                {
+                    b.HasOne("EFCore.Domain.Samurai")
+                        .WithOne("SecretIdentity")
+                        .HasForeignKey("EFCore.Domain.SecretIdentity", "SamuraiId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
