@@ -10,3 +10,9 @@ As we write and run the code for interacting with the data model, we want you to
 As soon as EF Core sees that you actually want some data as it hits the enumeration, got to go to the database and get that data for you so that triggers it to execute. Then you don't have to define the query variable in advance, you can just enumerate over the query itself, but there is a really important performance consideration to be aware of if you are depending on enumerations to go ahead and hit the database for you on the fly. 
 
 At the beginning of that execution, the database connection gets opened and it will stay open until the enumeration is complete and all of the results have been streamed back. In some cases, that's perfectly fine, but in others, for example, if you start performing a lot of operations on each one of the results while you're looping through them, not only can it cause performance problems, it could also cause other side effects if other people are interacting with the same database. 
+
+### Methods of Loading Related Data
+- Eager Loading : By .Include(RelatedEntity);
+
+
+-
