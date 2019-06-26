@@ -13,6 +13,6 @@ At the beginning of that execution, the database connection gets opened and it w
 
 ### Methods of Loading Related Data
 - Eager Loading : By .Include(RelatedEntity);
-
+  [img text](https://github.com/milindchavan12/EntityFrameworkCore/blob/master/include-linq.png)
 
 -
